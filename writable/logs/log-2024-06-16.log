@@ -1,0 +1,296 @@
+ERROR - 2024-06-16 07:29:44 --> mysqli_sql_exception: Table 'db_automation.logs' doesn't exist in /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/app/Controllers/User.php(78): CodeIgniter\Model->insert(Array)
+#8 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\User->create()
+#9 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/mac/Docu...')
+#13 {main}
+CRITICAL - 2024-06-16 07:29:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_automation.logs' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `logs` (`device_id`, `no_hp`, `log_api`, `nama`, `method`) VALUES (:device_id:, :no_hp:, :log_api:, :nama:, :method:)', [...], false)
+ 2 SYSTEMPATH/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/User.php(78): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\User->create()
+ 7 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+CRITICAL - 2024-06-16 07:29:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_automation.logs' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `logs` (`device_id`, `no_hp`, `log_api`, `nama`, `method`) VALUES (\'123\', \'081\', \'user\', \'Sugeng\', \'GET\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `logs` (`device_id`, `no_hp`, `log_api`, `nama`, `method`) VALUES (\'123\', \'081\', \'user\', \'Sugeng\', \'GET\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `logs` (`device_id`, `no_hp`, `log_api`, `nama`, `method`) VALUES (:device_id:, :no_hp:, :log_api:, :nama:, :method:)', [...], false)
+ 4 SYSTEMPATH/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/User.php(78): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\User->create()
+ 9 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+CRITICAL - 2024-06-16 07:29:44 --> [Caused by] mysqli_sql_exception: Table 'db_automation.logs' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `logs` (`device_id`, `no_hp`, `log_api`, `nama`, `method`) VALUES (\'123\', \'081\', \'user\', \'Sugeng\', \'GET\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `logs` (`device_id`, `no_hp`, `log_api`, `nama`, `method`) VALUES (\'123\', \'081\', \'user\', \'Sugeng\', \'GET\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `logs` (`device_id`, `no_hp`, `log_api`, `nama`, `method`) VALUES (\'123\', \'081\', \'user\', \'Sugeng\', \'GET\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `logs` (`device_id`, `no_hp`, `log_api`, `nama`, `method`) VALUES (:device_id:, :no_hp:, :log_api:, :nama:, :method:)', [...], false)
+ 5 SYSTEMPATH/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/User.php(78): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\User->create()
+10 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+CRITICAL - 2024-06-16 07:42:07 --> ErrorException: Undefined variable: userModel
+in APPPATH/Controllers/Message.php on line 70.
+ 1 APPPATH/Controllers/Message.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userModel', '/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/app/Controllers/Message.php', 70, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+ERROR - 2024-06-16 07:42:18 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `nama`\nF...', 0)
+#1 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`\nF...')
+#2 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`\nF...')
+#3 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`\nF...', Array, false)
+#4 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/app/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+#7 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\Message->create()
+#8 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+#9 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/mac/Docu...')
+#12 {main}
+CRITICAL - 2024-06-16 07:42:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama' in 'field list'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = :id_user:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+CRITICAL - 2024-06-16 07:42:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = :id_user:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 8 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+CRITICAL - 2024-06-16 07:42:18 --> [Caused by] mysqli_sql_exception: Unknown column 'nama' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = :id_user:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 7 APPPATH/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 9 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+ERROR - 2024-06-16 07:42:52 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `nama`\nF...', 0)
+#1 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`\nF...')
+#2 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`\nF...')
+#3 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`\nF...', Array, false)
+#4 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/app/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+#7 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\Message->create()
+#8 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+#9 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/mac/Docu...')
+#12 {main}
+CRITICAL - 2024-06-16 07:42:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama' in 'field list'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = :id_user:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+CRITICAL - 2024-06-16 07:42:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = :id_user:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 8 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+CRITICAL - 2024-06-16 07:42:52 --> [Caused by] mysqli_sql_exception: Unknown column 'nama' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = :id_user:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 7 APPPATH/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 9 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+ERROR - 2024-06-16 07:42:53 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `nama`\nF...', 0)
+#1 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`\nF...')
+#2 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`\nF...')
+#3 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`\nF...', Array, false)
+#4 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/app/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+#7 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\Message->create()
+#8 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+#9 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/mac/Docu...')
+#12 {main}
+CRITICAL - 2024-06-16 07:42:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama' in 'field list'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = :id_user:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+CRITICAL - 2024-06-16 07:42:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = :id_user:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 8 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
+CRITICAL - 2024-06-16 07:42:53 --> [Caused by] mysqli_sql_exception: Unknown column 'nama' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nama`
+FROM `tb_message`
+WHERE `id_user` = :id_user:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH/Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 7 APPPATH/Controllers/Message.php(70): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Message->create()
+ 9 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Message))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/mac/Documents/Fathur/KERJA/MEB/Backend/rest-api/public/index.php')
